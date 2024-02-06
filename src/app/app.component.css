@@ -1,3 +1,8 @@
 mat-icon {
   margin: 7px;
 }
+
+.data-table {
+  width: 80%;
+  margin: 20px auto;
+}

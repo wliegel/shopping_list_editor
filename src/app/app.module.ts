@@ -7,6 +7,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import { ShoppingTableComponent } from './shopping-table/shopping-table.component';
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ShoppingTableComponent } from './shopping-table/shopping-table.componen
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule
   ],
   providers: [
     provideAnimationsAsync()

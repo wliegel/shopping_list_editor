@@ -9,6 +9,7 @@ import {MatIconModule} from "@angular/material/icon";
 import { ShoppingTableComponent } from './shopping-table/shopping-table.component';
 import {MatTableModule} from "@angular/material/table";
 import {HttpClientModule} from "@angular/common/http";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatToolbarModule,
     MatIconModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatPaginatorModule
   ],
   providers: [
     provideAnimationsAsync()

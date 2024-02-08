@@ -10,6 +10,7 @@ import { ShoppingTableComponent } from './shopping-table/shopping-table.componen
 import {MatTableModule} from "@angular/material/table";
 import {HttpClientModule} from "@angular/common/http";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatSortModule} from "@angular/material/sort";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     MatIconModule,
     MatTableModule,
     HttpClientModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [
     provideAnimationsAsync()

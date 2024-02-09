@@ -5,3 +5,7 @@
 .inactive {
   color: gray;
 }
+
+.paginator-table th {
+  background-color: lightgray;
+}

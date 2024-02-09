@@ -1,32 +1,40 @@
-<div class="mat-elevation-z8">
-  <table mat-table [dataSource]="dataSource" matSort class="full-width-table">
-    <!-- Id Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell mat-sort-header *matHeaderCellDef>Id</th>
-      <td mat-cell *matCellDef="let element">{{element.id}}</td>
-    </ng-container>
+<mat-card>
+  <mat-card-header>
 
-    <ng-container matColumnDef="name">
-      <th mat-header-cell mat-sort-header *matHeaderCellDef>Name</th>
-      <td mat-cell *matCellDef="let element">{{element.name}}</td>
-    </ng-container>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort class="paginator-table">
+        <!-- Id Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef>Id</th>
+          <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+        </ng-container>
 
-    <ng-container matColumnDef="category">
-      <th mat-header-cell mat-sort-header *matHeaderCellDef>Kategorie</th>
-      <td mat-cell *matCellDef="let element">{{element.category}}</td>
-    </ng-container>
+        <ng-container matColumnDef="name">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+        </ng-container>
 
-    <ng-container matColumnDef="description">
-      <th mat-header-cell mat-sort-header *matHeaderCellDef>Details</th>
-      <td mat-cell *matCellDef="let element">{{element.description}}</td>
-    </ng-container>
+        <ng-container matColumnDef="category">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef>Kategorie</th>
+          <td mat-cell *matCellDef="let element">{{ element.category }}</td>
+        </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="{'inactive': !row.active}"></tr>
-  </table>
+        <ng-container matColumnDef="description">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef>Details</th>
+          <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+        </ng-container>
 
-  <mat-paginator
-    [pageSizeOptions]="[5, 10, 50, 100, 250]"
-    [showFirstLastButtons]=true>
-  </mat-paginator>
-</div>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="{'inactive': !row.active}"></tr>
+      </table>
+    </div>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 50, 100, 250]"
+      [showFirstLastButtons]=true>
+    </mat-paginator>
+  </mat-card-footer>
+</mat-card>

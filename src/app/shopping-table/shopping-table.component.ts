@@ -27,4 +27,8 @@ export class ShoppingTableComponent {
       this.dataSource.sort = this.sort;
     });
   }
+
+  filterList($event: KeyboardEvent) {
+    this.dataSource.filter = ($event.target as HTMLInputElement).value;
+  }
 }

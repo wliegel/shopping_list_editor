@@ -1,6 +1,8 @@
 <mat-card>
   <mat-card-header>
-
+    <mat-form-field>
+      <input matInput (keyup)="filterList($event)" placeholder="Suchen..." />
+    </mat-form-field>
   </mat-card-header>
   <mat-card-content>
     <div class="mat-elevation-z8">

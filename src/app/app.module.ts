@@ -12,6 +12,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatSortModule} from "@angular/material/sort";
 import {MatCardModule} from "@angular/material/card";
+import {MatInputModule} from "@angular/material/input";
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import {MatCardModule} from "@angular/material/card";
     HttpClientModule,
     MatPaginatorModule,
     MatSortModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [
     provideAnimationsAsync()

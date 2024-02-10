@@ -1,23 +1,143 @@
 {
   "items": [
-    {"id": "1", "category": "REWE", "name": "Kartoffeln", "description": "1kg", "active": true},
-    {"id": "2", "category": "REWE", "name": "Äpfel", "description": "3 Stück", "active": true},
-    {"id": "3", "category": "REWE", "name": "Birnen", "description": "vergleiche mit Äpfel", "active": false},
-    {"id": "4", "category": "REWE", "name": "Bananen", "description": "2kg", "active": true},
-    {"id": "5", "category": "REWE", "name": "Eier", "description": "10 Stück", "active": true},
-    {"id": "6", "category": "REWE", "name": "Käse", "description": "Schweizer Käse aus der Schweiz", "active": false},
-    {"id": "7", "category": "REWE", "name": "Milch", "description": "1 Liter", "active": true},
-    {"id": "8", "category": "REWE", "name": "Schokolade", "description": "3kg", "active": true},
-    {"id": "9", "category": "REWE", "name": "Brot", "description": "Semmeln, Brezn, Brot", "active": true},
-    {"id": "10", "category": "REWE", "name": "Karotten", "description": "1kg", "active": true},
-    {"id": "11", "category": "REWE", "name": "Sellerie", "description": "1kg", "active": true},
-    {"id": "12", "category": "REWE", "name": "Pomelo", "description": "3 Stück", "active": true},
-    {"id": "13", "category": "REWE", "name": "Nudeln", "description": "Es gibt Pasta! Basta!", "active": false},
-    {"id": "14", "category": "REWE", "name": "Pizza", "description": "Kühlpizza", "active": true},
-    {"id": "15", "category": "REWE", "name": "Fischstäbchen", "description": "Phi-Stäbchen", "active": true},
-    {"id": "16", "category": "REWE", "name": "Burger", "description": "Patties & Buns", "active": false},
-    {"id": "17", "category": "REWE", "name": "Scheibenkäse", "description": "Oh Scheibe", "active": true},
-    {"id": "18", "category": "REWE", "name": "Ketchup", "description": "3kg", "active": true},
-    {"id": "19", "category": "REWE", "name": "Senf", "description": "3g", "active": true}
+    {
+      "id": "1",
+      "category": "REWE",
+      "name": "Kartoffeln",
+      "description": "1kg",
+      "active": true
+    },
+    {
+      "id": "2",
+      "category": "REWE",
+      "name": "Äpfel",
+      "description": "3 Stück",
+      "active": true
+    },
+    {
+      "id": "3",
+      "category": "REWE",
+      "name": "Birnen",
+      "description": "vergleiche mit Äpfel",
+      "active": false
+    },
+    {
+      "id": "4",
+      "category": "REWE",
+      "name": "Bananen",
+      "description": "2kg",
+      "active": true
+    },
+    {
+      "id": "5",
+      "category": "REWE",
+      "name": "Eier",
+      "description": "10 Stück",
+      "active": true
+    },
+    {
+      "id": "6",
+      "category": "REWE",
+      "name": "Käse",
+      "description": "Schweizer Käse aus der Schweiz",
+      "active": false
+    },
+    {
+      "id": "7",
+      "category": "REWE",
+      "name": "Milch",
+      "description": "1 Liter",
+      "active": true
+    },
+    {
+      "id": "8",
+      "category": "REWE",
+      "name": "Schokolade",
+      "description": "3kg",
+      "active": true
+    },
+    {
+      "id": "9",
+      "category": "REWE",
+      "name": "Brot",
+      "description": "Semmeln, Brezn, Brot",
+      "active": true
+    },
+    {
+      "id": "10",
+      "category": "REWE",
+      "name": "Karotten",
+      "description": "1kg",
+      "active": true
+    },
+    {
+      "id": "11",
+      "category": "REWE",
+      "name": "Sellerie",
+      "description": "1kg",
+      "active": true
+    },
+    {
+      "id": "12",
+      "category": "REWE",
+      "name": "Pomelo",
+      "description": "3 Stück",
+      "active": true
+    },
+    {
+      "id": "13",
+      "category": "REWE",
+      "name": "Nudeln",
+      "description": "Es gibt Pasta! Basta!",
+      "active": false
+    },
+    {
+      "id": "14",
+      "category": "REWE",
+      "name": "Pizza",
+      "description": "Kühlpizza",
+      "active": true
+    },
+    {
+      "id": "15",
+      "category": "REWE",
+      "name": "Fischstäbchen",
+      "description": "Phi-Stäbchen",
+      "active": true
+    },
+    {
+      "id": "16",
+      "category": "REWE",
+      "name": "Burger",
+      "description": "Patties & Buns",
+      "active": false
+    },
+    {
+      "id": "17",
+      "category": "REWE",
+      "name": "Scheibenkäse",
+      "description": "Oh Scheibe",
+      "active": true
+    },
+    {
+      "id": "18",
+      "category": "REWE",
+      "name": "Ketchup",
+      "description": "3kg",
+      "active": true
+    },
+    {
+      "id": "19",
+      "category": "REWE",
+      "name": "Senf",
+      "description": "3g",
+      "active": true
+    },
+    {
+      "id": "ac1b",
+      "name": "bbbb",
+      "category": "bbbb",
+      "description": "bbbbb"
+    }
   ]
 }

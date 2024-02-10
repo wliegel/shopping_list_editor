@@ -27,8 +27,8 @@ export class ShoppingTableComponent {
   }
 
   getShoppingList() {
-    this.service.getShoppingList().subscribe(res => {
-      this.itemList = res;
+    this.service.getShoppingList().subscribe(result => {
+      this.itemList = result;
       this.dataSource = new MatTableDataSource<ShoppingItem>(this.itemList);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
@@ -57,6 +57,18 @@ export class ShoppingTableComponent {
     });
   }
 
+  private saveItem(element: ShoppingItem) {
+    this.service.saveItem(element).subscribe({
+      next: result => {
+        console.log(`Save successful: ${result.name}, ${result.category}, ${result.description}`);
+        this.getShoppingList();
+      },
+      error: error => {
+        console.log("Save failed", error);
+      }
+    });
+  }
+
   openEditDialog(formData: any) {
     const dialogRef = this.detailsDialog.open(ShoppingDetailsComponent, {
       width: '550px',
@@ -65,7 +77,7 @@ export class ShoppingTableComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       if(result) {
-        console.log(`New item: ${result.name}, ${result.category}, ${result.description}`)
+        this.saveItem(result);
       }
     })
   }

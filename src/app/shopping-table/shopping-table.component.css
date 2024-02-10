@@ -10,9 +10,9 @@
   background-color: lightgray;
 }
 
-.search-container {
+.header-container {
   width: 100%;
 }
-.search-container mat-form-field {
+.header-container mat-form-field {
   float: right;
 }

@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-header>
-    <div class="search-container">
+    <div class="header-container">
       <mat-form-field>
         <input matInput #filter (keyup)="filterList($event)" (keyup.escape)="clearFilter()" placeholder="Suchen..." />
         <button mat-button matSuffix (click)="clearFilter()">

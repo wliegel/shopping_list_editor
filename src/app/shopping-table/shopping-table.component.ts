@@ -82,7 +82,7 @@ export class ShoppingTableComponent {
     })
   }
 
-  onClick(element: ShoppingItem) {
+  toggleActive(element: ShoppingItem) {
     element.active = !element.active;
     this.saveItem(element);
   }

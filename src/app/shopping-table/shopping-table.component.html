@@ -44,7 +44,7 @@
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="{'inactive': !row.active}" (dblclick)="openEditDialog(row)">
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="{'inactive': !row.active}" (click)="onClick(row)" (dblclick)="openEditDialog(row)">
       </table>
     </div>
   </mat-card-content>

@@ -15,11 +15,13 @@ import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatButtonModule} from "@angular/material/button";
+import { ShoppingDetailsComponent } from './shopping-details/shopping-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShoppingTableComponent
+    ShoppingTableComponent,
+    ShoppingDetailsComponent
   ],
   imports: [
     BrowserModule,

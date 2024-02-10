@@ -4,6 +4,8 @@ import {ShoppingService} from "../service/shopping.service";
 import {MatTableDataSource} from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
+import {MatDialog} from "@angular/material/dialog";
+import {ShoppingDetailsComponent} from "../shopping-details/shopping-details.component";
 
 @Component({
   selector: 'app-shopping-table',
@@ -20,7 +22,7 @@ export class ShoppingTableComponent {
   @ViewChild(MatSort) sort !: MatSort;
   @ViewChild('filter') filter: any;
 
-  constructor(private service: ShoppingService) {
+  constructor(private service: ShoppingService, private detailsDialog: MatDialog) {
     this.getShoppingList();
   }
 
@@ -45,7 +47,7 @@ export class ShoppingTableComponent {
   removeItem(element: ShoppingItem) {
     console.log("delete item with id: " + element.id);
     this.service.deleteItem(element).subscribe({
-      next: data => {
+      next: () => {
         console.log("delete successful");
         this.getShoppingList();
       },
@@ -55,7 +57,16 @@ export class ShoppingTableComponent {
     });
   }
 
-  addItem() {
+  openEditDialog(formData: any) {
+    const dialogRef = this.detailsDialog.open(ShoppingDetailsComponent, {
+      width: '550px',
+      data: formData
+    });
 
+    dialogRef.afterClosed().subscribe(result => {
+      if(result) {
+        console.log(`New item: ${result.name}, ${result.category}, ${result.details}`)
+      }
+    })
   }
 }

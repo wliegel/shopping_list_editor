@@ -17,6 +17,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatButtonModule} from "@angular/material/button";
 import { ShoppingDetailsComponent } from './shopping-details/shopping-details.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {MatDialogModule} from "@angular/material/dialog";
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule
   ],
   providers: [
     provideAnimationsAsync()

@@ -65,7 +65,7 @@ export class ShoppingTableComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       if(result) {
-        console.log(`New item: ${result.name}, ${result.category}, ${result.details}`)
+        console.log(`New item: ${result.name}, ${result.category}, ${result.description}`)
       }
     })
   }

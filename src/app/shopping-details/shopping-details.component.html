@@ -1,1 +1,20 @@
-<p>shopping-details works!</p>
+<div mat-dialog-content class="dialog-form">
+  <mat-form-field class="form-field">
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+
+  <mat-form-field class="form-field">
+    <mat-label>Kategorie</mat-label>
+    <input matInput [(ngModel)]="data.category">
+  </mat-form-field>
+
+  <mat-form-field class="form-field">
+    <mat-label>Details</mat-label>
+    <input matInput [(ngModel)]="data.description">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="onCancelClick()">Abbrechen</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="data">Speichern</button>
+</div>

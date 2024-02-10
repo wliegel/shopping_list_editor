@@ -18,6 +18,7 @@ export class ShoppingTableComponent {
   dataSource: any;
   @ViewChild(MatPaginator) paginator !: MatPaginator;
   @ViewChild(MatSort) sort !: MatSort;
+  @ViewChild('filter') filter: any;
 
   constructor(private service: ShoppingService) {
     this.service.getShoppingList().subscribe(res => {
@@ -30,5 +31,10 @@ export class ShoppingTableComponent {
 
   filterList($event: KeyboardEvent) {
     this.dataSource.filter = ($event.target as HTMLInputElement).value;
+  }
+
+  clearFilter() {
+    this.filter.nativeElement.value='';
+    this.dataSource.filter='';
   }
 }

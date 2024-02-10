@@ -21,6 +21,10 @@ export class ShoppingTableComponent {
   @ViewChild('filter') filter: any;
 
   constructor(private service: ShoppingService) {
+    this.getShoppingList();
+  }
+
+  getShoppingList() {
     this.service.getShoppingList().subscribe(res => {
       this.itemList = res;
       this.dataSource = new MatTableDataSource<ShoppingItem>(this.itemList);
@@ -34,12 +38,20 @@ export class ShoppingTableComponent {
   }
 
   clearFilter() {
-    this.filter.nativeElement.value='';
-    this.dataSource.filter='';
+    this.filter.nativeElement.value = '';
+    this.dataSource.filter = '';
   }
 
   removeItem(element: ShoppingItem) {
     console.log("delete item with id: " + element.id);
-    this.service.deleteItem(element);
+    this.service.deleteItem(element).subscribe({
+      next: data => {
+        console.log("delete successful");
+        this.getShoppingList();
+      },
+      error: error => {
+        console.log("Delete failed", error);
+      }
+    });
   }
 }

@@ -9,3 +9,10 @@
 .paginator-table th {
   background-color: lightgray;
 }
+
+.search-container {
+  width: 100%;
+}
+.search-container mat-form-field {
+  float: right;
+}

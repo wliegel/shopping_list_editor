@@ -13,4 +13,8 @@ export class ShoppingService {
   getShoppingList(): Observable<ShoppingItem[]> {
     return this.http.get<ShoppingItem[]>("http://localhost:3000/items");
   }
+
+  deleteItem(element: ShoppingItem) {
+    this.http.delete("http://localhost:3000/items/" + element.id)
+  }
 }

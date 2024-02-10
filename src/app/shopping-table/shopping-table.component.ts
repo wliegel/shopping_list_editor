@@ -13,7 +13,7 @@ import {MatSort} from "@angular/material/sort";
 export class ShoppingTableComponent {
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name', 'category', 'description'];
+  displayedColumns = ['id', 'name', 'category', 'description', 'action'];
   itemList !: ShoppingItem[];
   dataSource: any;
   @ViewChild(MatPaginator) paginator !: MatPaginator;
@@ -36,5 +36,10 @@ export class ShoppingTableComponent {
   clearFilter() {
     this.filter.nativeElement.value='';
     this.dataSource.filter='';
+  }
+
+  removeItem(element: ShoppingItem) {
+    console.log("delete item with id: " + element.id);
+    this.service.deleteItem(element);
   }
 }

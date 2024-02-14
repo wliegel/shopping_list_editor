@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {ShoppingItem} from "../shopping-table/shopping-item";
+import {environment} from "../../environments/environment";
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,16 +14,17 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ShoppingService {
+  private readonly server: string = environment.API_BASE_URL;
 
   constructor(private http: HttpClient) {
   }
 
   getShoppingList(): Observable<ShoppingItem[]> {
-    return this.http.get<ShoppingItem[]>("http://localhost:3000/items");
+    return this.http.get<ShoppingItem[]>(this.server);
   }
 
   deleteItem(element: ShoppingItem): Observable<ShoppingItem> {
-    return this.http.delete<ShoppingItem>("http://localhost:3000/items/" + element.id)
+    return this.http.delete<ShoppingItem>(this.server + element.id)
   }
 
   saveItem(element: ShoppingItem): Observable<ShoppingItem> {
@@ -34,10 +36,10 @@ export class ShoppingService {
   }
 
   private updateItem(element: ShoppingItem): Observable<ShoppingItem> {
-    return this.http.put<ShoppingItem>("http://localhost:3000/items/" + element.id, element, httpOptions);
+    return this.http.put<ShoppingItem>(this.server + element.id, element, httpOptions);
   }
 
   private createItem(element: ShoppingItem): Observable<ShoppingItem> {
-    return this.http.post<ShoppingItem>("http://localhost:3000/items/", element, httpOptions);
+    return this.http.post<ShoppingItem>(this.server, element, httpOptions);
   }
 }

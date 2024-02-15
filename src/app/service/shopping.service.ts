@@ -24,7 +24,7 @@ export class ShoppingService {
   }
 
   deleteItem(element: ShoppingItem): Observable<ShoppingItem> {
-    return this.http.delete<ShoppingItem>(this.server + element.id)
+    return this.http.delete<ShoppingItem>(this.server + "/" + element.id)
   }
 
   saveItem(element: ShoppingItem): Observable<ShoppingItem> {
@@ -36,7 +36,7 @@ export class ShoppingService {
   }
 
   private updateItem(element: ShoppingItem): Observable<ShoppingItem> {
-    return this.http.put<ShoppingItem>(this.server + element.id, element, httpOptions);
+    return this.http.put<ShoppingItem>(this.server + "/" + element.id, element, httpOptions);
   }
 
   private createItem(element: ShoppingItem): Observable<ShoppingItem> {

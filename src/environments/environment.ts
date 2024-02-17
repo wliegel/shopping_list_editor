@@ -1,3 +1,3 @@
 export const environment = {
-  API_BASE_URL: 'http://localhost:3000/items'
+  API_BASE_URL: '/api/v1/shoppingitems'
 };

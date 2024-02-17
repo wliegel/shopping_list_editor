@@ -8,8 +8,8 @@ services:
     expose:
       - 80
     networks:
-      - internalnet
+      - shoppinglistapi_internalnet
 
 networks:
-  internalnet:
-    driver: bridge
+  shoppinglistapi_internalnet:
+    external: true

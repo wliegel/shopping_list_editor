@@ -23,7 +23,7 @@ export class ShoppingService {
     return this.http.get<ShoppingItem[]>(this.server);
   }
 
-  deleteItem(element: ShoppingItem): Observable<ShoppingItem> {
+  deleteItem(element: ShoppingItem): Observable<any> {
     return this.http.delete<ShoppingItem>(this.server + "/" + element.id)
   }
 

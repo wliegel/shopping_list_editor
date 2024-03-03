@@ -38,7 +38,7 @@ docker compose down
 
 ## Clean up Docker image and resources
 <pre>
-docker image rm shoppinglistapi:latest
+docker image rm shoppinglisteditor:v1
 docker image prune
 docker network prune
 </pre>
